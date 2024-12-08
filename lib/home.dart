@@ -14,6 +14,9 @@ class Home extends StatelessWidget {
                 child: Column(
           children: [
             _buildGestureDetector(context),
+            const SizedBox(height: 20), // Add some spacing
+            const Text('This is the bottom half of the page!',
+                style: TextStyle(fontSize: 20)),
           ],
         ))));
   }
