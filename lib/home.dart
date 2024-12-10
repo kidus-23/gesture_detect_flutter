@@ -60,9 +60,9 @@ class _HomeState extends State<Home> {
 
   DragTarget<int> _buildDragTarget() {
     return DragTarget<int>(
-      onAccept: (colorValue) {
+      onAcceptWithDetails: (colorValue) {
         setState(() {
-          textColor = Color(colorValue);
+          textColor = Color(colorValue as int);
         });
       },
       builder: (context, candidateData, rejectedData) => Text(
